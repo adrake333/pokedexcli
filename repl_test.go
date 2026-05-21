@@ -13,6 +13,23 @@ func TestCleanInput(t *testing.T) {
 			input: "Charmander Bulbasaur PIKACHU",
 			expected: []string{"charmander", "bulbasaur", "pikachu"},
 		},
+		{
+			input: "   Charmander Bulbasaur PIKACHU  ",
+			expected: []string{"charmander", "bulbasaur", "pikachu"},
+		},
+		{
+			input: "charmander bulbasaur pikachu",
+			expected: []string{"charmander", "bulbasaur", "pikachu"},
+		},
+		{
+			input: "ChArMandEr BulBasAur PiKaCHu",
+			expected: []string{"charmander", "bulbasaur", "pikachu"},
+		},
+		{
+			input: "Charmander",
+			expected: []string{"charmander"},
+		},
+
 	}
 	for _, c := range cases {
 		actual := cleanInput(c.input)
