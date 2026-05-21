@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	print("Hello World!")
+	print("Hello, World!")
 }
 
 
