@@ -51,6 +51,13 @@ type cliCommand struct {
 }
 
 
+type config struct {
+	nextLocationsURL	*string
+	previousLocationsURL	*string
+}
+
+
+
 func getCommands() map[string]cliCommand {
 	return map[string]cliCommand{
 		"exit": {
@@ -62,6 +69,16 @@ func getCommands() map[string]cliCommand {
 			name:		"help",
 			description: 	"Displays a help message",
 			callback:	commandHelp,
+		},
+		"map": {
+			name:		"map",
+			description:	"Displays the next 20 location areas in the Pokemon World",
+			callback:	commandMap,
+		},
+		"mapb": {
+			name:		"mapb",
+			description:	"Displays the previous 20 location areas in the Pokemon World",
+			callback:	commandMapb,
 		},
 	}
 }
@@ -80,6 +97,18 @@ func commandHelp() error {
 	for _, value := range getCommands() {
 		fmt.Printf("%s: %s\n", value.name, value.description)
 	}
+	return nil
+}
+
+
+func commandMap() error {
+	//map command here
+	return nil
+}
+
+
+func commandMapb() error {
+	//mapb command here
 	return nil
 }
 
