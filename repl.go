@@ -10,6 +10,8 @@ import (
 	"os"
 )
 
+import "github.com/adrake333/pokedexcli/internal/pokeapi"
+
 
 
 
@@ -57,7 +59,6 @@ type config struct {
 }
 
 
-
 func getCommands() map[string]cliCommand {
 	return map[string]cliCommand{
 		"exit": {
@@ -84,33 +85,7 @@ func getCommands() map[string]cliCommand {
 }
 
 
-func commandExit() error {
-	fmt.Println("Closing the Pokedex... Goodbye!")
-	os.Exit(0)
-	return nil
-}
 
-
-func commandHelp() error {
-	fmt.Println("Welcome to the Pokedex!")
-	fmt.Println("Usage:\n")
-	for _, value := range getCommands() {
-		fmt.Printf("%s: %s\n", value.name, value.description)
-	}
-	return nil
-}
-
-
-func commandMap() error {
-	//map command here
-	return nil
-}
-
-
-func commandMapb() error {
-	//mapb command here
-	return nil
-}
 
 
 
