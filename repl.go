@@ -23,7 +23,9 @@ func cleanInput(text string) []string {
 
 
 func startRepl() {
+	cfg := &config{}
 	scanner := bufio.NewScanner(os.Stdin)
+	commands := getCommands()
 	for {
 		fmt.Print("Pokedex > ")
 		scanner.Scan()
@@ -33,9 +35,9 @@ func startRepl() {
 			continue
 		}
 		firstWord := cleanedLine[0]
-		value, exists := getCommands()[firstWord]
+		value, exists := commands[firstWord]
 		if exists {
-			err := value.callback()
+			err := value.callback(cfg)
 			if err != nil {
 				fmt.Println(err)
 			}
