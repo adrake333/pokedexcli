@@ -22,8 +22,7 @@ func cleanInput(text string) []string {
 }
 
 
-func startRepl() {
-	cfg := &config{}
+func startRepl(cfg *config) {
 	scanner := bufio.NewScanner(os.Stdin)
 	commands := getCommands()
 	for {
@@ -56,6 +55,7 @@ type cliCommand struct {
 
 
 type config struct {
+	pokeapiClient		pokeapi.Client
 	nextLocationsURL	*string
 	previousLocationsURL	*string
 }

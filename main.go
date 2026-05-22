@@ -3,13 +3,19 @@ package main
 
 
 
-import "github.com/adrake333/pokedexcli/internal/pokeapi"
+import (
+	"github.com/adrake333/pokedexcli/internal/pokeapi"
+	"time"
+)
 
 
 
 
 func main() {
-	startRepl()
+	cfg := &config{
+		pokeapiClient: pokeapi.NewClient(5 * time.Second),
+	}
+	startRepl(cfg)
 }
 
 

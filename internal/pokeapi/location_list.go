@@ -12,12 +12,12 @@ import (
 
 
 
-func ListLocations(url *string) (LocationAreaResp, error) {
+func (c *Client) ListLocations(url *string) (LocationAreaResp, error) {
 	endpoint := "https://pokeapi.co/api/v2/location-area"
 	if url != nil {
 		endpoint = *url
 	}
-	resp, err := http.Get(endpoint)
+	resp, err := c.httpClient.Get(endpoint)
 	if err != nil {
 		return LocationAreaResp{}, err
 	}
