@@ -4,8 +4,7 @@ package pokeapi
 
 
 import (
-	"net/http"
-	"fmt"
+	"encoding/json"
 	"io"
 )
 

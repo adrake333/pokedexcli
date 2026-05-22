@@ -23,7 +23,7 @@ func commandMap(cfg *config) error {
 
 func commandMapb(cfg *config) error {
 	if cfg.previousLocationsURL == nil {
-		fmt.Printlm("you're on the first page")
+		fmt.Println("you're on the first page")
 		return nil
 	}
 	locations, err := cfg.pokeapiClient.ListLocations(cfg.previousLocationsURL)

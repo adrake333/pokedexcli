@@ -3,13 +3,6 @@ package pokeapi
 
 
 
-import (
-	""
-)
-
-
-
-
 type LocationAreaResp struct {
 	Count    int    `json:"count"`
 	Next     *string `json:"next"`
