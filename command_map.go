@@ -7,13 +7,13 @@ import (
 
 
 
-func commandMap() error {
+func commandMap(cfg *config) error {
 	//map command here
 	return nil
 }
 
 
-func commandMapb() error {
+func commandMapb(cfg *config) error {
 	//mapb command here
 	return nil
 }
