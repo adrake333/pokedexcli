@@ -20,4 +20,14 @@ func commandInspect(cfg *config, pokemon []string) error {
 		fmt.Printf("Height: %v\n", value.Height)
 		fmt.Printf("Weight: %v\n", value.Weight)
 		fmt.Println("Stats:")
-		fmt.Printf("  -hp: %v\n", value.//???)
+		for _, stat := range value.Stats {
+			fmt.Printf("  -%v: %v\n", stat.Stat.Name, stat.BaseStat)
+		}
+		fmt.Println("Types:")
+		for _, poketype := range value.Types {
+			fmt.Printf("  - %v\n", poketype.Type.Name)
+		}
+	} else {
+		fmt.Println("you have not caught that pokemon")
+	}
+}
