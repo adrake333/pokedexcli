@@ -6,30 +6,29 @@ import (
 
 func TestCleanInput(t *testing.T) {
 	cases := []struct {
-		input string
+		input    string
 		expected []string
 	}{
 		{
-			input: "Charmander Bulbasaur PIKACHU",
+			input:    "Charmander Bulbasaur PIKACHU",
 			expected: []string{"charmander", "bulbasaur", "pikachu"},
 		},
 		{
-			input: "   Charmander Bulbasaur PIKACHU  ",
+			input:    "   Charmander Bulbasaur PIKACHU  ",
 			expected: []string{"charmander", "bulbasaur", "pikachu"},
 		},
 		{
-			input: "charmander bulbasaur pikachu",
+			input:    "charmander bulbasaur pikachu",
 			expected: []string{"charmander", "bulbasaur", "pikachu"},
 		},
 		{
-			input: "ChArMandEr BulBasAur PiKaCHu",
+			input:    "ChArMandEr BulBasAur PiKaCHu",
 			expected: []string{"charmander", "bulbasaur", "pikachu"},
 		},
 		{
-			input: "Charmander",
+			input:    "Charmander",
 			expected: []string{"charmander"},
 		},
-
 	}
 	for _, c := range cases {
 		actual := cleanInput(c.input)

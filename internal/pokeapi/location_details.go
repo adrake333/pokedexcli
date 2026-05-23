@@ -1,15 +1,9 @@
 package pokeapi
 
-
-
-
 import (
 	"encoding/json"
 	"io"
 )
-
-
-
 
 func (c *Client) LocationDetails(area string) (LocationDetailsResp, error) {
 	endpoint := "https://pokeapi.co/api/v2/location-area/" + area

@@ -4,9 +4,6 @@ import (
 	"fmt"
 )
 
-
-
-
 func commandHelp(cfg *config, _ []string) error {
 	fmt.Println("Welcome to the Pokedex!")
 	fmt.Printf("Usage:\n\n")
@@ -15,4 +12,3 @@ func commandHelp(cfg *config, _ []string) error {
 	}
 	return nil
 }
-

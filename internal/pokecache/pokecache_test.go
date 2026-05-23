@@ -1,8 +1,5 @@
 package pokecache
 
-
-
-
 import (
 	"fmt"
 	"testing"

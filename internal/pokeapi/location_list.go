@@ -1,15 +1,9 @@
 package pokeapi
 
-
-
-
 import (
 	"encoding/json"
 	"io"
 )
-
-
-
 
 func (c *Client) ListLocations(url *string) (LocationAreaResp, error) {
 	endpoint := "https://pokeapi.co/api/v2/location-area"
@@ -41,4 +35,3 @@ func (c *Client) ListLocations(url *string) (LocationAreaResp, error) {
 	c.cache.Add(endpoint, body)
 	return locations, nil
 }
-

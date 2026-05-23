@@ -1,16 +1,10 @@
 package pokeapi
 
-
-
-
-import(
+import (
 	"encoding/json"
 	"fmt"
 	"io"
 )
-
-
-
 
 func (c *Client) PokemonData(name string) (PokemonDataResp, error) {
 	endpoint := "https://pokeapi.co/api/v2/pokemon/" + name

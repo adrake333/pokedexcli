@@ -1,15 +1,9 @@
 package main
 
-
-
-
 import (
 	"fmt"
 	"math/rand"
 )
-
-
-
 
 func commandCatch(cfg *config, pokemon []string) error {
 	if len(pokemon) < 1 {
@@ -34,4 +28,3 @@ func commandCatch(cfg *config, pokemon []string) error {
 	}
 	return nil
 }
-

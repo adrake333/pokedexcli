@@ -4,9 +4,6 @@ import (
 	"fmt"
 )
 
-
-
-
 func commandMap(cfg *config, _ []string) error {
 	locations, err := cfg.pokeapiClient.ListLocations(cfg.nextLocationsURL)
 	if err != nil {
@@ -19,7 +16,6 @@ func commandMap(cfg *config, _ []string) error {
 	}
 	return nil
 }
-
 
 func commandMapb(cfg *config, _ []string) error {
 	if cfg.previousLocationsURL == nil {
@@ -37,4 +33,3 @@ func commandMapb(cfg *config, _ []string) error {
 	}
 	return nil
 }
-
