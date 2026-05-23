@@ -30,4 +30,5 @@ func commandInspect(cfg *config, pokemon []string) error {
 	} else {
 		fmt.Println("you have not caught that pokemon")
 	}
+	return nil
 }
